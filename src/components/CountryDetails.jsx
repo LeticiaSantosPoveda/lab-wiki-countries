@@ -3,11 +3,11 @@ import {Link} from 'react-router-dom';
 
 function CountryDetails({countries}){
 
-    const {id} = useParams();
+  const {id} = useParams();
 
-    const country = countries.find(country => country.alpha3Code === id)
+  const country = countries.find(country => country.alpha3Code === id)
 
-    return(
+  return(
         <div className="col-7">
             <h1>{country.name.official}</h1>
             <img src={`https://flagpedia.net/data/flags/icon/72x54/${country.alpha2Code.toLowerCase()}.png`} alt="country flag"/>
@@ -19,9 +19,9 @@ function CountryDetails({countries}){
                   <td>{country.capital}</td>
                 </tr>
                 <tr>
-                  <td>{country.area}</td>
+                  <td>Area</td>
                   <td>
-                    551695 km
+                  {country.area} km
                     <sup>2</sup>
                   </td>
                 </tr>

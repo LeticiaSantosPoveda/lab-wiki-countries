@@ -14,11 +14,15 @@ const apiURL = "https://ih-countries-api.herokuapp.com/countries"
 function App() {
 
   const [countriesData, setCountriesData] = useState([]);
+  // const [loading, setLoading] = useState(true);
 
       useEffect(()=>{
         axios.get(apiURL)
         .then(results=>{
             setCountriesData(results.data);
+          //   setTimeout(()=> {
+          //     setLoading(false);
+          // }, 2000);
         })
     }, []);
 
